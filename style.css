@@ -1,26 +1,93 @@
 * {
   box-sizing: border-box;
+  line-height: 1.5;
+  font-family: 'Open Sans', sans-serif;
 }
 
-html, body {
-  font-size: 1.25rem;
-  margin: 0;
+body {
+  font-size: 1rem;
+  color: black;
+  margin: 50px;
   padding: 0;
+  background: white;
 }
 
-h1, h2 {
-  margin: 0 0 1rem;
+main > p {
+  margin: 0 0 20px 0;
 }
+
+main > p:last-child {
+  margin: 0;
+}
+
+.m-b-10 {
+  margin: 0 0 10px 0;
+}
+
+button {
+  color: white;
+  background-color: #0099ff;
+  cursor: pointer;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 3px;
+  font-size: 1rem;
+}
+
+/**************/
+/* Layout *****/
+/**************/
+
+.h-align, .v-align {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.h-align {
+  flex-direction: row;
+}
+
+.v-align {
+  flex-direction: column;
+}
+
+.w-max-768 {
+  max-width: 768px;
+}
+
+.m-auto {
+  margin: 0 auto;
+}
+
+/**************/
+/* Dialog *****/
+/**************/
 
 .container {
   position: relative;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 100vw;
-  height: 100vh;
-  font-family: Lato;
-  color: #222;
+}
+
+.container.active {
+  display: flex;
+}
+
+dialog {
+  width: 400px;
+  height: auto;
+  padding: 1.5rem;
+  border: none;
+  box-shadow: 0 0 20px 10px rgba(0,0,0,0.2);
+  transition: background 0.25s ease;
+}
+
+dialog::backdrop {
+  background: rgba(0, 0, 0, 0.15);
+  transition: background 0.25s ease;
 }
 
 menu {
@@ -28,14 +95,5 @@ menu {
   justify-content: flex-end;
   margin: 0;
   padding: 0;
-}
-
-dialog {
-  min-width: 400px;
-  padding: 1.5rem;
-}
-
-dialog::backdrop {
-  background: rgba(0, 0, 0, 0.15);
 }
  
