@@ -79,7 +79,7 @@ button {
 dialog {
   width: 400px;
   height: auto;
-  padding: 1.5rem;
+  padding: 20px;
   border: none;
   box-shadow: 0 0 20px 10px rgba(0,0,0,0.2);
   transition: background 0.25s ease;
@@ -96,4 +96,12 @@ menu {
   margin: 0;
   padding: 0;
 }
- 
+
+section {
+  font-size: 0.875rem;
+}
+
+section > img {
+  float: left;
+  margin: 5px 15px 20px 0;
+}
